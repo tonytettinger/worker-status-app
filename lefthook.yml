@@ -1,6 +1,8 @@
 pre-commit:
   parallel: true
   commands:
+testing:
+run: yarn test
 eslint:
   glob: "*.{js,ts}"
   run: npx eslint {staged_files}
