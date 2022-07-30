@@ -1,7 +1,12 @@
+commit-msg:
+  scripts:
+    'format-checker':
+      runner: bash
+
 pre-commit:
   parallel: true
   commands:
-    prettier: 
+    prettier:
       run: yarn prettier --check {staged_files}
     linter:
       glob: 'src/**/*.{ts,tsx}'
@@ -9,8 +14,3 @@ pre-commit:
     test:
       glob: 'src/**/*.{ts,tsx}'
       run: yarn test
-
-commit-msg:
-  scripts:
-    "format-checker.sh":
-      runner: bash
