@@ -1,16 +1,16 @@
 pre-commit:
   parallel: true
   commands:
-testing:
-run: yarn test
-eslint:
-  glob: "*.{js,ts}"
-  run: npx eslint {staged_files}
-prettier:
-  glob: "*.{js,ts}"
-  run: npx prettier --check {staged_files}
+    prettier: 
+      run: yarn prettier --check {staged_files}
+    linter:
+      glob: 'src/**/*.{ts,tsx}'
+      run: yarn eslint {staged_files}
+    test:
+      glob: 'src/**/*.{ts,tsx}'
+      run: yarn test
 
 commit-msg:
   scripts:
-"format-checker.sh":
-  runner: bash
+    "format-checker.sh":
+      runner: bash
