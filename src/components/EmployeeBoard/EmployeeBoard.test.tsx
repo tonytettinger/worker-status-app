@@ -5,6 +5,6 @@ import EmployeeBoard from './EmployeeBoard';
 describe('Simple working test', () => {
   it('the title is visible', () => {
     render(<EmployeeBoard />)
-    expect(screen.getByText(/This is the employee board/i)).toBeInTheDocument()
+    expect(screen.getByText(/This is the eployee board/i)).toBeInTheDocument()
   })
 })
