@@ -4,10 +4,9 @@ commit-msg:
       runner: bash
 
 pre-commit:
-  parallel: true
   commands:
     prettier:
-      run: yarn prettier --check {staged_files}
+      run: yarn prettier --write {staged_files} && git add {staged_files}
     linter:
       glob: 'src/**/*.{ts,tsx}'
       run: yarn eslint {staged_files}
