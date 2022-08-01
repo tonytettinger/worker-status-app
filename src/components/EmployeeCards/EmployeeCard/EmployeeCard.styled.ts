@@ -4,7 +4,7 @@ import { EmployeeStatus } from '../../../common/interfaces/employee.interface';
 const backgroundColors = (status: EmployeeStatus) =>
   ({
     added: 'blue',
-    incheck: 'yellow',
+    incheck: 'darkgoldenrod',
     approved: 'green',
     inactive: 'teal',
     active: 'orange'
@@ -49,6 +49,7 @@ export const StyledProgress = styled.div<{
     }
     text-transform: uppercase;
     cursor: pointer;
+    color: white;
     margin: 0;
     margin-left: 0.5%;
     height: 3rem;

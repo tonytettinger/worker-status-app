@@ -5,6 +5,11 @@ const StyledEmployeeBoard = styled.section`
   margin-left: auto;
   margin-right: auto;
   max-width: 60rem;
+  margin-top: 5rem;
+
+  h1 {
+    text-align: center;
+  }
 `;
 
 export default StyledEmployeeBoard;

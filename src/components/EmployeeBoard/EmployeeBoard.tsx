@@ -8,7 +8,7 @@ const EmployeeBoard = () => {
   const employees = useGetEmployees();
   return (
     <StyledEmployeeBoard>
-      <h1>This is the employee board</h1>
+      <h1>Employee Management System</h1>
       <EmployeeCard employees={employees || []} />
       <EmployeeForm />
     </StyledEmployeeBoard>

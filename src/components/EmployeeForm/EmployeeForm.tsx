@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAddEmployee from '../../hooks/employees/useAddEmployee';
+import { StyledEmployeeForm, StyledInput } from './EmployeeForm.styled';
 
 interface EmployeeData {
   name: string;
@@ -15,12 +16,10 @@ const EmployeeForm: React.FC = () => {
   });
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input type="text" {...register('name')} />
-        <input type="submit" />
-      </form>
-    </div>
+    <StyledEmployeeForm onSubmit={onSubmit}>
+      <StyledInput type="text" {...register('name')} />
+      <StyledInput type="submit" value="Add new employee" />
+    </StyledEmployeeForm>
   );
 };
 

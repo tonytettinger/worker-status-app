@@ -6,12 +6,12 @@ import EmployeeBoard from './EmployeeBoard';
 import client from '../../common/apollo-client';
 
 describe('Simple working test', () => {
-  it('the title is visible', () => {
+  it('the title is visible and correct', () => {
     render(
       <ApolloProvider client={client}>
         <EmployeeBoard />
       </ApolloProvider>
     );
-    expect(screen.getByText(/This is the employee board/i)).toBeInTheDocument();
+    expect(screen.getByText(/Employee Management System/i)).toBeInTheDocument();
   });
 });
