@@ -2,6 +2,10 @@
 
 This project allows to query employees with their statuses, persisted in a PostgreSQL DB, that is accessed with GraphQL via Hasura. One can also delete and add new employees.
 
+## Live Deploy
+
+https://main--eloquent-meringue-3dd8b2.netlify.app/
+
 ## Local dev setup
 
 yarn install
