@@ -25,4 +25,4 @@ The project uses Lefthook for enforcing ESlint rules, conventional commit messag
 2. Apollo should update the cached data to reflect the changes immediately instead of waiting for the roundtrip request when executing a CRUD operation.
 3. Variables such as common font sizes and colors should be extracted and based on Hex Color Codes.
 4. There should be proper error handling, probably with react-error-boundary to handle API fetching issues.
-5.
+5. There should be more tests.
