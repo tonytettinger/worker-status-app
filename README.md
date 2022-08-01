@@ -17,7 +17,7 @@ React, Typescript, Apollo, Styled Components, React Testing Library, Lefthook, v
 
 ## Features
 
-The project uses Lefthook for enforcing ESlint rules, conventional commit message format, and auto-prettify on commit.
+The project uses Lefthook for enforcing ESlint rules, conventional commit message format, and runs tests and auto-prettify on commit.
 
 ## Important notes for improvement
 
@@ -25,3 +25,4 @@ The project uses Lefthook for enforcing ESlint rules, conventional commit messag
 2. Apollo should update the cached data to reflect the changes immediately instead of waiting for the roundtrip request when executing a CRUD operation.
 3. Variables such as common font sizes and colors should be extracted and based on Hex Color Codes.
 4. There should be proper error handling, probably with react-error-boundary to handle API fetching issues.
+5.
