@@ -5,7 +5,8 @@ const client = new ApolloClient({
   uri: 'https://humble-guppy-90.hasura.app/v1/graphql',
   cache: new InMemoryCache(),
   headers: {
-    'x-hasura-admin-secret': process.env.HASURA_GRAPHQL_ADMIN_SECRET!
+    'x-hasura-admin-secret':
+      'IW0rz4JxfFHl15no8s7kpxsorGRYC08dMCPGZdy5glo9txwVVsV0Yl5ViiP6Btdd'
   }
 });
 
