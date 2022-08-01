@@ -1,5 +1,5 @@
 const sortByStringProp = (items: any[], prop: string) => {
-  const sortFunction = (a, b) => {
+  const sortFunction = (a: any, b: any) => {
     const nameA = a[prop].toUpperCase();
     const nameB = b[prop].toUpperCase();
 
