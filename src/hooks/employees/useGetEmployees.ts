@@ -1,5 +1,4 @@
 import { gql, useQuery } from '@apollo/client';
-import { IEmployeeProps } from '../../common/interfaces/employee.interface';
 
 export const GET_EMPLOYEES = gql`
   query GetAllEmployees {
@@ -11,9 +10,9 @@ export const GET_EMPLOYEES = gql`
   }
 `;
 
-const useGetEmployees = (): IEmployeeProps[] | undefined => {
-  const { data } = useQuery(GET_EMPLOYEES);
-  return data?.Employees;
+const useGetEmployees = () => {
+  const { loading, error, data } = useQuery(GET_EMPLOYEES);
+  return { loading, error, data };
 };
 
 export default useGetEmployees;

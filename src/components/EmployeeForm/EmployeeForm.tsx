@@ -8,17 +8,22 @@ interface EmployeeData {
 }
 
 const EmployeeForm: React.FC = () => {
-  const { register, handleSubmit } = useForm<EmployeeData>();
+  const { register, handleSubmit, reset } = useForm<EmployeeData>();
   const createPost = useAddEmployee();
 
   const onSubmit = handleSubmit(({ name }) => {
     createPost({ variables: { name } });
+    reset();
   });
 
   return (
     <StyledEmployeeForm onSubmit={onSubmit}>
-      <StyledInput type="text" {...register('name')} />
-      <StyledInput type="submit" value="Add new employee" />
+      <StyledInput
+        type="text"
+        {...register('name')}
+        placeholder="Click here to enter name"
+      />
+      <StyledInput type="submit" value="Add Employee" />
     </StyledEmployeeForm>
   );
 };

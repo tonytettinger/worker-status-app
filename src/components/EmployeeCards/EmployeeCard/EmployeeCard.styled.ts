@@ -16,6 +16,8 @@ export const StyledEmployeeCard = styled.div`
 `;
 
 export const StyledDeleteButton = styled.button`
+  display: flex;
+  justify-content: space-between;
   color: white;
   background: tomato;
   border-radius: 5%;
@@ -25,6 +27,10 @@ export const StyledDeleteButton = styled.button`
   margin: 1rem 0;
   text-transform: uppercase;
   font-size: 1.25rem;
+
+  & svg {
+    margin-left: 1rem;
+  }
 `;
 
 export const StyledName = styled.div`
@@ -43,7 +49,7 @@ export const StyledProgress = styled.div<{
   isActive: boolean;
 }>`
   ${({ status, isActive }) => css`
-    font-size: 1.2rem;
+    font-size: 1rem;
     @media (min-width: 768px) {
       font-size: 1.5rem;
     }
@@ -65,13 +71,13 @@ export const StyledProgress = styled.div<{
       position: absolute;
       transition: all 0.8s;
       z-index: -1;
+      background: ${isActive ? backgroundColors(status) : 'grey'};
     }
     &:before {
       height: 50%;
       width: 100%;
       top: 0;
       left: 0;
-      background: ${isActive ? backgroundColors(status) : 'grey'};
       -webkit-transform: skew(45deg);
       -moz-transform: skew(45deg);
       transform: skew(45deg);

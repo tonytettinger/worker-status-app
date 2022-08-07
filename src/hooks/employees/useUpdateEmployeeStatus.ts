@@ -28,7 +28,7 @@ const useUpdateEmployeeStatus = (): ((
   updateEmployee: IUpdateEmployeesInput
 ) => any) => {
   const [updateEmployeeStatus] = useMutation(UPDATE_EMPLOYEE_STATUS, {
-    refetchQueries: [{ query: GET_EMPLOYEES }, 'GetEmployees']
+    refetchQueries: [{ query: GET_EMPLOYEES }]
   });
   return updateEmployeeStatus;
 };

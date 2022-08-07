@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 import {
   StyledProgress,
   StyledEmployeeCard,
@@ -28,7 +29,8 @@ const EmployeeCard = ({ status, name, id }: IEmployeeProps) => {
       <StyledTopRow>
         <StyledName>{name}</StyledName>
         <StyledDeleteButton onClick={() => deleteOnClick()}>
-          Delete &darr;
+          Delete
+          <FaTrashAlt />
         </StyledDeleteButton>
       </StyledTopRow>
       {employeeStatuses.map((availableStatus: EmployeeStatus, index) => (

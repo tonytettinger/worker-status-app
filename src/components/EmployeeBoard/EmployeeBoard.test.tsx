@@ -12,6 +12,8 @@ describe('Simple working test', () => {
         <EmployeeBoard />
       </ApolloProvider>
     );
-    expect(screen.getByText(/Employee Management System/i)).toBeInTheDocument();
+    expect(
+      screen.queryByText('Employee Management System')
+    ).toBeInTheDocument();
   });
 });

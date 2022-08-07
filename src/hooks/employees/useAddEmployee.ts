@@ -13,7 +13,7 @@ const ADD_EMPLOYEE = gql`
 
 const useAddEmployee = () => {
   const [addEmployee] = useMutation(ADD_EMPLOYEE, {
-    refetchQueries: [{ query: GET_EMPLOYEES }, 'GetEmployees']
+    refetchQueries: [{ query: GET_EMPLOYEES }]
   });
   return addEmployee;
 };

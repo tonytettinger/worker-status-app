@@ -10,6 +10,5 @@ export const StyledInput = styled.input`
   width: 50%;
   font-weight: bold;
   font-size: 1.6rem;
-  text-align: center;
   padding: 0.5rem;
 `;
